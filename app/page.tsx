@@ -1,9 +1,12 @@
+"use client";
+
 import DataPill from "@/components/DataPill";
 import Footer from "@/components/Footer";
 import Heading from "@/components/Heading";
 import Nodes from "@/components/Nodes";
 import RadarField from "@/components/RadarField";
 import RadarRing from "@/components/RadarRing";
+import SpeedDial from "@/components/SpeedDial";
 import {
   User,
   BriefcaseBusiness,
@@ -13,6 +16,36 @@ import {
 } from "lucide-react";
 
 export default function Home() {
+  const navItems = [
+    {
+      label: "Curiosity",
+      icon: <FileQuestionMark className="size-8" />,
+      onClick: () => {
+        console.log("Curiosity");
+      },
+    },
+    {
+      label: "Skills",
+      icon: <Code className="size-8" />,
+      onClick: () => {
+        console.log("Skills");
+      },
+    },
+    {
+      label: "Projects",
+      icon: <BriefcaseBusiness className="size-8" />,
+      onClick: () => {
+        console.log("Projects");
+      },
+    },
+    {
+      label: "About",
+      icon: <User className="size-8" />,
+      onClick: () => {
+        console.log("About");
+      },
+    },
+  ];
   return (
     <>
       <Heading />
@@ -135,6 +168,7 @@ export default function Home() {
         </RadarField>
       </main>
       <Footer />
+      <SpeedDial items={navItems} />
     </>
   );
 }
