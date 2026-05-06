@@ -31,10 +31,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} relative h-full antialiased`}
+      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} antialiased`}
       suppressHydrationWarning
     >
-      <body>
+      <body className="h-screen overflow-hidden">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

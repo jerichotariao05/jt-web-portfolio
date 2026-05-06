@@ -24,7 +24,7 @@ export default function Heading() {
           >
             View My Work
           </Button>
-          {/* <ModeToggle /> */}
+          <ModeToggle />
         </div>
       </div>
     </div>
