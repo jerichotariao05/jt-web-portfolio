@@ -1,5 +1,10 @@
 "use client";
 
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import DataPill from "@/components/DataPill";
 import Footer from "@/components/Footer";
 import Heading from "@/components/Heading";
