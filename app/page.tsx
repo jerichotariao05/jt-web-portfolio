@@ -11,6 +11,7 @@ import Heading from "@/components/Heading";
 import Nodes from "@/components/Nodes";
 import RadarField from "@/components/RadarField";
 import RadarRing from "@/components/RadarRing";
+import RadarPageSweep from "@/components/RadarPageSweep";
 import SpeedDial from "@/components/SpeedDial";
 import {
   User,
