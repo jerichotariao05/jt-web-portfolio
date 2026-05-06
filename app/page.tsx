@@ -3,7 +3,6 @@ import Heading from "@/components/Heading";
 import Nodes from "@/components/Nodes";
 import RadarField from "@/components/RadarField";
 import RadarRing from "@/components/RadarRing";
-import { ModeToggle } from "@/components/ThemeToggle";
 import {
   User,
   BriefcaseBusiness,
@@ -96,6 +95,7 @@ export default function Home() {
             />
           </div>
         </RadarField>
+        {/* Contact Zone */}
         <RadarField size={678} rotation={160}>
           <div className="relative">
             <Nodes
@@ -116,6 +116,21 @@ export default function Home() {
               className="left-[-40%] bottom-[20%] -translate-x-1/2 translate-y-full"
             />
           </div>
+        </RadarField>
+        <RadarField size={690} rotation={-50}>
+          <span className="relative inline-flex size-2 rounded-full bg-accent shadow-[0_0_8px_color-mix(in_srgb,var(--ring)_80%,transparent)]" />
+        </RadarField>
+        <RadarField size={420} rotation={68}>
+          <span className="relative inline-flex size-2 rounded-full bg-accent shadow-[0_0_8px_color-mix(in_srgb,var(--ring)_80%,transparent)]" />
+        </RadarField>
+        <RadarField size={700} rotation={128}>
+          <span className="relative inline-flex size-2 rounded-full bg-accent shadow-[0_0_8px_color-mix(in_srgb,var(--ring)_80%,transparent)]" />
+        </RadarField>
+        <RadarField size={880} rotation={138}>
+          <span className="relative inline-flex size-3 rounded-full bg-accent shadow-[0_0_8px_color-mix(in_srgb,var(--ring)_80%,transparent)]" />
+        </RadarField>
+        <RadarField size={420} rotation={-118}>
+          <span className="relative inline-flex size-3 rounded-full bg-accent shadow-[0_0_8px_color-mix(in_srgb,var(--ring)_80%,transparent)]" />
         </RadarField>
       </main>
     </>
