@@ -1,4 +1,5 @@
 import DataPill from "@/components/DataPill";
+import Footer from "@/components/Footer";
 import Heading from "@/components/Heading";
 import Nodes from "@/components/Nodes";
 import RadarField from "@/components/RadarField";
@@ -16,7 +17,7 @@ export default function Home() {
     <>
       <Heading />
       <main className="relative flex w-full min-h-dvh items-center justify-center overflow-hidden sm:overflow-visible">
-        <Nodes icon={<User className="size-16" />} width={160} height={160} />
+        <Nodes icon={<User className="size-18" />} width={180} height={180} />
         <RadarRing size={620} />
         <RadarRing size={1020} />
         <RadarRing size={1440} />
@@ -133,6 +134,7 @@ export default function Home() {
           <span className="relative inline-flex size-3 rounded-full bg-accent shadow-[0_0_8px_color-mix(in_srgb,var(--ring)_80%,transparent)]" />
         </RadarField>
       </main>
+      <Footer />
     </>
   );
 }
