@@ -6,9 +6,9 @@ export default function RadarField({
   rotation,
 }: PropsWithChildren<{ size: number; rotation: number }>) {
   return (
-    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+    <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
       <div
-        className="flex items-start justify-start"
+        className="pointer-events-none flex items-start justify-start"
         style={{
           width: `${size}px`,
           height: `${size}px`,
@@ -16,7 +16,7 @@ export default function RadarField({
         }}
       >
         <div
-          className="inline-flex"
+          className="pointer-events-auto inline-flex"
           style={{
             transform: `rotate(${rotation * -1}deg)`,
           }}

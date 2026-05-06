@@ -10,7 +10,7 @@ export default function Heading() {
           Jericho Joshua Tariao
         </h3>
         <h5 className="text-lg md:text-xl font-medium">Software Developer</h5>
-        <div className="flex gap-2 mt-2">
+        {/* <div className="flex gap-2 mt-2">
           <Button
             size="lg"
             className="bg-transparent border border-primary/40 text-neutral-100 rounded-full transition-all duration-300 hover:scale-105 cursor-pointer"
@@ -24,8 +24,8 @@ export default function Heading() {
           >
             View My Work
           </Button>
-          <ModeToggle />
-        </div>
+        </div> */}
+        <ModeToggle />
       </div>
     </div>
   );

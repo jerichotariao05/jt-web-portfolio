@@ -15,8 +15,8 @@ export default function Home() {
   return (
     <>
       <Heading />
-      <main className="h-full flex items-center justify-center">
-        <Nodes icon={<User className="size-12" />} width={160} height={160} />
+      <main className="relative flex w-full min-h-dvh items-center justify-center overflow-hidden sm:overflow-visible">
+        <Nodes icon={<User className="size-16" />} width={160} height={160} />
         <RadarRing size={620} />
         <RadarRing size={1020} />
         <RadarRing size={1440} />
