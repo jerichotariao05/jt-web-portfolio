@@ -5,6 +5,11 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import AboutDialog from "@/components/modals/AboutDialog";
+import ContactDialog from "@/components/modals/ContactDialog";
+import CuriosityDialog from "@/components/modals/CuriosityDialog";
+import ProjectsDialog from "@/components/modals/ProjectsDialog";
+import SkillsDialog from "@/components/modals/SkillsDialog";
 import DataPill from "@/components/DataPill";
 import Footer from "@/components/Footer";
 import Heading from "@/components/Heading";
@@ -13,6 +18,7 @@ import RadarField from "@/components/RadarField";
 import RadarRing from "@/components/RadarRing";
 import RadarPageSweep from "@/components/RadarPageSweep";
 import SpeedDial from "@/components/SpeedDial";
+import { usePortfolioStore } from "@/store/usePortfolioStore";
 import {
   User,
   BriefcaseBusiness,
@@ -22,34 +28,28 @@ import {
 } from "lucide-react";
 
 export default function Home() {
+  const openModal = usePortfolioStore((state) => state.openModal);
+
   const navItems = [
     {
       label: "???",
       icon: <FileQuestionMark className="size-8" />,
-      onClick: () => {
-        console.log("Curiosity");
-      },
+      onClick: () => openModal("curiosity"),
     },
     {
       label: "Skills",
       icon: <Code className="size-8" />,
-      onClick: () => {
-        console.log("Skills");
-      },
+      onClick: () => openModal("skills"),
     },
     {
       label: "Projects",
       icon: <BriefcaseBusiness className="size-8" />,
-      onClick: () => {
-        console.log("Projects");
-      },
+      onClick: () => openModal("projects"),
     },
     {
       label: "About",
       icon: <User className="size-8" />,
-      onClick: () => {
-        console.log("About");
-      },
+      onClick: () => openModal("about"),
     },
   ];
   return (
@@ -62,6 +62,7 @@ export default function Home() {
           width={180}
           height={180}
           image={"/images/profile.webp"}
+          onClick={() => openModal("about")}
         />
         <RadarRing size={620} />
         <RadarRing size={1020} />
@@ -74,6 +75,7 @@ export default function Home() {
               icon={<BriefcaseBusiness className="size-12" />}
               width={120}
               height={120}
+              onClick={() => openModal("projects")}
             />
             <DataPill
               title="Stocks Inventory System"
@@ -96,6 +98,7 @@ export default function Home() {
               icon={<Code className="size-10" />}
               width={100}
               height={100}
+              onClick={() => openModal("skills")}
             />
             <DataPill
               title="React"
@@ -126,6 +129,7 @@ export default function Home() {
               icon={<FileQuestionMark className="size-10" />}
               width={100}
               height={100}
+              onClick={() => openModal("curiosity")}
             />
             <DataPill
               title="Things about me"
@@ -148,6 +152,7 @@ export default function Home() {
               icon={<Send className="size-12" />}
               width={120}
               height={120}
+              onClick={() => openModal("contact")}
             />
             <DataPill
               title="jerichotariao15@gmail.com"
@@ -181,6 +186,12 @@ export default function Home() {
       </main>
       <Footer />
       <SpeedDial items={navItems} />
+
+      <ProjectsDialog />
+      <SkillsDialog />
+      <CuriosityDialog />
+      <AboutDialog />
+      <ContactDialog />
     </>
   );
 }
