@@ -60,10 +60,10 @@ export default function SpeedDial({ items, className }: SpeedDialProps) {
             className="flex items-center group focus:outline-none"
             style={{ transitionDelay: open ? `${index * 50}ms` : "0ms" }}
           >
-            <span className="mr-3 px-3 py-1 font-medium text-accent-foreground bg-card/90 backdrop-blur-sm border border-accent rounded-full shadow-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            <span className="mr-3 px-3 py-1 font-medium text-accent-foreground bg-card/90 backdrop-blur-sm border border-primary rounded-full shadow-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
               {item.label}
             </span>
-            <div className="flex items-center justify-center size-16 rounded-full shadow-lg border border-border bg-card hover:bg-accent hover:text-foreground transition-colors duration-200 cursor-pointer">
+            <div className="flex items-center justify-center size-16 rounded-full shadow-lg border border-border bg-card hover:bg-primary hover:text-foreground transition-colors duration-200 cursor-pointer">
               {item.icon}
             </div>
           </button>
@@ -79,7 +79,7 @@ export default function SpeedDial({ items, className }: SpeedDialProps) {
         }}
         aria-expanded={open}
         aria-label={open ? "Close menu" : "Open menu"}
-        className="flex items-center justify-center size-16 text-foreground bg-accent rounded-full shadow-xl hover:bg-accent/90 focus:ring-4 focus:ring-accent/30 focus:outline-none transition-all duration-300 active:scale-95 cursor-pointer"
+        className="flex items-center justify-center size-16 text-foreground bg-primary rounded-full shadow-xl hover:bg-primary/90 focus:ring-4 focus:ring-primary/30 focus:outline-none transition-all duration-300 active:scale-95 cursor-pointer"
       >
         <Plus
           className={cn(

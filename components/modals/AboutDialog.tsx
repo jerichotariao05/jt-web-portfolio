@@ -6,9 +6,11 @@ import { MonitorCog, User, FileCode } from "lucide-react";
 import Image from "next/image";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
 import ExperienceTimeline, {
   type ExperienceTimelineItem,
 } from "@/components/ExperienceTimeline";
+import { FileIcon } from "lucide-react";
 
 export default function AboutDialog() {
   const open = usePortfolioStore(selectModalOpen("about"));
@@ -62,7 +64,7 @@ export default function AboutDialog() {
           <TabsContent value="profile">
             {" "}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 items-start p-2">
-              <div className="col-span-1 flex justify-center sm:justify-start">
+              <div className="col-span-1 flex flex-col items-center justify-center sm:justify-start gap-2">
                 <div className="relative h-[312px] aspect-4/5 mx-auto">
                   <Image
                     src="/images/profile.webp"
@@ -71,6 +73,21 @@ export default function AboutDialog() {
                     className="rounded-md object-cover"
                   />
                 </div>
+                <Button
+                  variant="outline"
+                  size="icon-lg"
+                  className="px-6 py-2"
+                  asChild
+                >
+                  <a
+                    href="/Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FileIcon className="mr-2" />
+                    View Resume
+                  </a>
+                </Button>
               </div>
               <div className="col-span-2">
                 <ScrollArea className="h-[312px] pr-4">

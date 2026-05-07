@@ -50,7 +50,7 @@ export default function ExperienceTimeline({
       </div>
 
       {/* Desktop+: horizontal timeline */}
-      <div className="hidden max-h-[400px] overflow-x-auto pb-6 sm:block">
+      <div className="hidden max-h-[400px] overflow-x-auto overflow-y-hidden pb-6 sm:block">
         <div className="flex min-w-max space-x-8 py-8 px-4">
           <ol className="sm:flex">
             {items.map((item, idx) => (
