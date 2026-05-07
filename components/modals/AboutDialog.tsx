@@ -10,13 +10,13 @@ export default function AboutDialog() {
 
   return (
     <AppDialog
-      size="xlarge"
       open={open}
       onClose={() => closeModal("about")}
+      size="large"
       header={
-        <span className="flex items-center gap-2">
-          <User className="size-5" /> About
-        </span>
+        <h3 className="flex items-center gap-2 text-2xl md:text-3xl font-semibold tracking-tight">
+          <User className="size-8" /> About
+        </h3>
       }
     >
       <p className="text-muted-foreground text-sm">

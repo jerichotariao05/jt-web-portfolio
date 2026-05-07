@@ -12,13 +12,16 @@ export default function ContactDialog() {
     <AppDialog
       open={open}
       onClose={() => closeModal("contact")}
+      size="large"
       header={
-        <span className="flex items-center gap-2">
-          <Send className="size-5" /> Contact
-        </span>
+        <h3 className="flex items-center gap-2 text-2xl md:text-3xl font-semibold tracking-tight">
+          <Send className="size-8" /> Contact
+        </h3>
       }
     >
-      <p className="text-muted-foreground text-sm">Contact details coming soon.</p>
+      <p className="text-muted-foreground text-sm">
+        Contact details coming soon.
+      </p>
     </AppDialog>
   );
 }

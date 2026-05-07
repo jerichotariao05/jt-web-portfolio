@@ -1,10 +1,5 @@
 "use client";
 
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import AboutDialog from "@/components/modals/AboutDialog";
 import ContactDialog from "@/components/modals/ContactDialog";
 import CuriosityDialog from "@/components/modals/CuriosityDialog";
@@ -25,7 +20,9 @@ import {
   FileQuestionMark,
   Code,
   Send,
+  Mouse,
 } from "lucide-react";
+import { ModeToggle } from "@/components/ThemeToggle";
 
 export default function Home() {
   const openModal = usePortfolioStore((state) => state.openModal);
@@ -55,8 +52,17 @@ export default function Home() {
   return (
     <>
       <Heading />
+      {/* Theme-aware top/bottom fade to keep fixed header/footer readable */}
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-x-0 top-0 z-5 h-32 bg-linear-to-b from-background/95 via-background/70 to-transparent"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-x-0 bottom-0 z-5 h-32 bg-linear-to-t from-background/95 via-background/70 to-transparent"
+      />
       <main className="relative flex w-full min-h-dvh items-center justify-center overflow-hidden sm:overflow-visible">
-        {/* <RadarPageSweep /> */}
+        <RadarPageSweep />
         <Nodes
           icon={<User className="size-18" />}
           width={180}
@@ -87,7 +93,7 @@ export default function Home() {
             />
             <DataPill
               title="Math for Kids"
-              className="left-[-40%] bottom-[20%] -translate-x-1/2 translate-y-full"
+              className="left-[-40%] bottom-[10%] -translate-x-1/2 translate-y-full"
             />
           </div>
         </RadarField>
@@ -139,10 +145,6 @@ export default function Home() {
               title="Hobbies"
               className="left-[10%] top-[-10%] -translate-x-full -translate-y-1/2"
             />
-            <DataPill
-              title="Inspo for this website"
-              className="left-[26%] bottom-[-50%] -translate-x-full -translate-y-1/2"
-            />
           </div>
         </RadarField>
         {/* Contact Zone */}
@@ -184,6 +186,12 @@ export default function Home() {
           <span className="relative inline-flex size-3 rounded-full bg-accent shadow-[0_0_8px_color-mix(in_srgb,var(--ring)_80%,transparent)]" />
         </RadarField>
       </main>
+      <div className="absolute z-20 bottom-1 left-0 w-full flex flex-col items-center justify-center gap-2 cursor-help">
+        <Mouse className="size-6" />
+        <p className="font-mono text-sm leading-relaxed">
+          Move or Click to Navigate
+        </p>
+      </div>
       <Footer />
       <SpeedDial items={navItems} />
 

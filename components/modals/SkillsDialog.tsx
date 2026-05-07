@@ -12,13 +12,16 @@ export default function SkillsDialog() {
     <AppDialog
       open={open}
       onClose={() => closeModal("skills")}
+      size="large"
       header={
-        <span className="flex items-center gap-2">
-          <Code className="size-5" /> Skills
-        </span>
+        <h3 className="flex items-center gap-2 text-2xl md:text-3xl font-semibold tracking-tight">
+          <Code className="size-8" /> Skills
+        </h3>
       }
     >
-      <p className="text-muted-foreground text-sm">Skills details coming soon.</p>
+      <p className="text-muted-foreground text-sm">
+        Skills details coming soon.
+      </p>
     </AppDialog>
   );
 }

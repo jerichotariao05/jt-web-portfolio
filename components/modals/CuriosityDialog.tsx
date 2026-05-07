@@ -12,13 +12,16 @@ export default function CuriosityDialog() {
     <AppDialog
       open={open}
       onClose={() => closeModal("curiosity")}
+      size="large"
       header={
-        <span className="flex items-center gap-2">
-          <FileQuestionMark className="size-5" /> ???
-        </span>
+        <h3 className="flex items-center gap-2 text-2xl md:text-3xl font-semibold tracking-tight">
+          <FileQuestionMark className="size-8" /> ???
+        </h3>
       }
     >
-      <p className="text-muted-foreground text-sm">Curiosity details coming soon.</p>
+      <p className="text-muted-foreground text-sm">
+        Curiosity details coming soon.
+      </p>
     </AppDialog>
   );
 }

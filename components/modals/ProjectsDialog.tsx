@@ -12,13 +12,16 @@ export default function ProjectsDialog() {
     <AppDialog
       open={open}
       onClose={() => closeModal("projects")}
+      size="xlarge"
       header={
-        <span className="flex items-center gap-2">
-          <BriefcaseBusiness className="size-5" /> Projects
-        </span>
+        <h3 className="flex items-center gap-2 text-2xl md:text-3xl font-semibold tracking-tight">
+          <BriefcaseBusiness className="size-8" /> Projects
+        </h3>
       }
     >
-      <p className="text-muted-foreground text-sm">Project details coming soon.</p>
+      <p className="text-muted-foreground text-sm">
+        Project details coming soon.
+      </p>
     </AppDialog>
   );
 }
