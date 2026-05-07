@@ -74,9 +74,8 @@ export default function AboutDialog() {
                   />
                 </div>
                 <Button
-                  variant="outline"
-                  size="icon-lg"
-                  className="w-full px-6 py-2"
+                  size="lg"
+                  className="w-fit text-foreground px-4 rounded-full"
                   asChild
                 >
                   <a
@@ -84,7 +83,7 @@ export default function AboutDialog() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FileIcon className="mr-2" />
+                    <FileIcon />
                     View Resume
                   </a>
                 </Button>

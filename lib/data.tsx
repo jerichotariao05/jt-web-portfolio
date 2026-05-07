@@ -1386,7 +1386,6 @@ export const projects = {
       thumbnail: "/images/projects/math-for-kids/math_kids.jpg",
       bgColor: ["#0166FF", "#3D8BFF"],
       images: [
-        "/images/projects/math-for-kids/math_kids.jpg",
         "/images/projects/math-for-kids/math_kids_2.jpg",
         "/images/projects/math-for-kids/math_kids_3.jpg",
         "/images/projects/math-for-kids/math_kids_4.png",
@@ -1407,7 +1406,6 @@ export const projects = {
       thumbnail: "/images/projects/photo-novela/photo_novela_1.png",
       bgColor: ["#A8582A", "#C06B3A"],
       images: [
-        "/images/projects/photo-novela/photo_novela.png",
         "/images/projects/photo-novela/photo_novela_1.png",
         "/images/projects/photo-novela/photo_novela_2.png",
       ],
