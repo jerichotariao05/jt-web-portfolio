@@ -11,7 +11,7 @@ export default function SkillsDialog() {
 
   return (
     <AppDialog
-      size="large"
+      size="medium"
       open={open}
       onClose={() => closeModal("skills")}
       header={
@@ -23,7 +23,7 @@ export default function SkillsDialog() {
         </div>
       }
     >
-      <p className="text-base md:text-lg leading-relaxed mb-4">
+      <p className="text-muted-foreground leading-relaxed mb-4">
         These are the technologies and tools I use to build my projects.
       </p>
       <div className="flex flex-col gap-8">
