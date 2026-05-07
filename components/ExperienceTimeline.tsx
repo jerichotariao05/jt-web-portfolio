@@ -25,7 +25,7 @@ export default function ExperienceTimeline({
   return (
     <div className={cn("w-full", className)}>
       {/* Mobile: vertical timeline */}
-      <div className="max-h-[386px] overflow-y-auto pl-6 pr-4 sm:hidden">
+      <div className="min-h-[386px] overflow-y-auto pl-6 pr-4 sm:hidden">
         <ol className="relative border-s border-primary/90">
           {items.map((item, idx) => (
             <li key={`${item.title}-${item.org}-${idx}`} className="mb-10 ms-6">

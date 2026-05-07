@@ -76,7 +76,7 @@ export default function AboutDialog() {
                 <Button
                   variant="outline"
                   size="icon-lg"
-                  className="px-6 py-2"
+                  className="w-full px-6 py-2"
                   asChild
                 >
                   <a
