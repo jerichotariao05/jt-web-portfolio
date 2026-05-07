@@ -52,7 +52,6 @@ export default function Home() {
   return (
     <>
       <Heading />
-      {/* Theme-aware top/bottom fade to keep fixed header/footer readable */}
       <div
         aria-hidden
         className="pointer-events-none fixed inset-x-0 top-0 z-5 h-32 bg-linear-to-b from-background/95 via-background/70 to-transparent"
