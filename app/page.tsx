@@ -57,7 +57,12 @@ export default function Home() {
       <Heading />
       <main className="relative flex w-full min-h-dvh items-center justify-center overflow-hidden sm:overflow-visible">
         {/* <RadarPageSweep /> */}
-        <Nodes icon={<User className="size-18" />} width={180} height={180} />
+        <Nodes
+          icon={<User className="size-18" />}
+          width={180}
+          height={180}
+          image={"/images/profile.webp"}
+        />
         <RadarRing size={620} />
         <RadarRing size={1020} />
         <RadarRing size={1440} />
