@@ -12,15 +12,19 @@ export default function ProjectsDialog() {
     <AppDialog
       open={open}
       onClose={() => closeModal("projects")}
-      size="xlarge"
+      size="large"
       header={
-        <h3 className="flex items-center gap-2 text-2xl md:text-3xl font-semibold tracking-tight">
-          <BriefcaseBusiness className="size-8" /> Projects
-        </h3>
+        <div className="flex items-center gap-2">
+          <BriefcaseBusiness className="size-8" />
+          <h2 className="flex items-center gap-2 text-3xl md:text-4xl font-semibold tracking-tight">
+            Projects
+          </h2>
+        </div>
       }
     >
-      <p className="text-muted-foreground text-sm">
-        Project details coming soon.
+      <p className="text-sm text-muted-foreground leading-relaxed pr-4">
+        These are websites and applications I developed. They showcase
+        responsive layouts, interactive elements, and user-centered design.
       </p>
     </AppDialog>
   );

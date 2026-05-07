@@ -1378,3 +1378,112 @@ export const skills = {
     },
   ],
 } as const;
+
+export const projects = {
+  school: [
+    {
+      title: "Math for Kids",
+      thumbnail: "/images/projects/math-for-kids/math_kids.jpg",
+      bgColor: ["#0166FF", "#3D8BFF"],
+      images: [
+        "/images/projects/math-for-kids/math_kids.jpg",
+        "/images/projects/math-for-kids/math_kids_2.jpg",
+        "/images/projects/math-for-kids/math_kids_3.jpg",
+        "/images/projects/math-for-kids/math_kids_4.png",
+        "/images/projects/math-for-kids/math_kids_5.png",
+      ],
+      description:
+        "A mobile app that helps children practice basic math through interactive games.",
+      keyFeatures: [
+        "Focused on numerical operations like addition, and subtraction",
+        "Designed for engagement and accessibility for young learners",
+        "Built with Flutter as an introduction to mobile app development",
+        "Applied principles of designing apps for children",
+      ],
+      technologies: ["Dart", "Flutter"],
+    },
+    {
+      title: "Photo Novela",
+      thumbnail: "/images/projects/photo-novela/photo_novela_1.png",
+      bgColor: ["#A8582A", "#C06B3A"],
+      images: [
+        "/images/projects/photo-novela/photo_novela.png",
+        "/images/projects/photo-novela/photo_novela_1.png",
+        "/images/projects/photo-novela/photo_novela_2.png",
+      ],
+      description: "A social app concept for sharing stories through photos.",
+      keyFeatures: [
+        "Explored full-stack development",
+        "Users create narratives paired with images",
+        "Combined photo sharing with storytelling elements",
+      ],
+      technologies: ["Dart", "Flutter", "PHP", "MySQL"],
+    },
+    {
+      title: "Pet Adoption System",
+      thumbnail: "/images/projects/pet-adoption-system/pet_adoption.webp",
+      bgColor: ["#EC489B", "#F472B6"],
+      images: [
+        "/images/projects/pet-adoption-system/pet_adoption.webp",
+        "/images/projects/pet-adoption-system/pet_adoption2.webp",
+      ],
+      description:
+        "A web application to support pet rescue and adoption processes.",
+      keyFeatures: [
+        "Developed a web application to facilitate the rescue and adoption of stray and homeless pets",
+        "Users browse pets, submit adoption requests, and track progress",
+        "Improved responsive layouts and user/admin views",
+      ],
+      technologies: ["React", "Nextjs", "CSS", "Tailwind", "PHP", "MySQL"],
+    },
+    {
+      title: "CRB STEEL INDUSTRIAL SALES, INC. Stocks Inventory System",
+      thumbnail: "/images/projects/stocks-inventory-system/CRB_login.webp",
+      bgColor: ["#FF6600", "#FF8A1F"],
+      images: ["/images/projects/stocks-inventory-system/CRB_login.webp"],
+      description:
+        "A capstone project that streamlined inventory management for a client with complex stock tracking needs.",
+      keyFeatures: [
+        "Developed a web application to streamline operations",
+        "Five user levels with role-specific access",
+        "Unique tracking method based on net weight instead of quantity",
+        "Solved inefficiencies and errors in manual record keeping",
+      ],
+      technologies: [
+        "HTML",
+        "CSS",
+        "Bootstrap 5",
+        "JavaScript",
+        "PHP",
+        "MySQL",
+      ],
+    },
+  ],
+  personal: [
+    {
+      title: "Heavenly Garden by Angels",
+      bgColor: ["#84D63B", "#67E08C"],
+      thumbnail:
+        "/images/projects/heavenly-garden-by-angels/heavenly_garden.webp",
+      images: [
+        "/images/projects/heavenly-garden-by-angels/heavenly_garden.webp",
+        "/images/projects/heavenly-garden-by-angels/heavenly_garden_2.webp",
+      ],
+      description:
+        "A personal project building an online presence for a gardening service.",
+      keyFeatures: [
+        "Contact page with email, phone, and social links",
+        "Services page outlining the full list of offerings",
+        "Gallery showcasing past work for credibility",
+        "Emphasis on accessibility, usability, and a modern visual theme",
+      ],
+      technologies: ["Astro", "CSS", "Tailwind CSS", "Typescript"],
+      link: "http://heavenlygardenbyangels.com.au/",
+    },
+    {
+      title: "Cafe Management System",
+      bgColor: ["#8A5A2B", "#A56B35"],
+      isComingSoon: true,
+    },
+  ],
+} as const;
