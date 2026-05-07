@@ -4,7 +4,7 @@ import { ModeToggle } from "./ThemeToggle";
 
 export default function Heading() {
   return (
-    <div className="hidden md:block fixed top-0 w-fit z-10 px-1 bg-linear-to-r from-accent to-transparent">
+    <div className="hidden md:block fixed top-0 w-fit z-10 px-1 bg-linear-to-r from-slate-900 to-transparent">
       <div className="flex flex-col gap-1.5 p-2">
         <h3 className="font-heading text-2xl md:text-3xl font-semibold tracking-tight pr-8">
           Jericho Joshua Tariao

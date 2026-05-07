@@ -24,7 +24,7 @@ import {
 export default function Home() {
   const navItems = [
     {
-      label: "Curiosity",
+      label: "???",
       icon: <FileQuestionMark className="size-8" />,
       onClick: () => {
         console.log("Curiosity");
@@ -56,6 +56,7 @@ export default function Home() {
     <>
       <Heading />
       <main className="relative flex w-full min-h-dvh items-center justify-center overflow-hidden sm:overflow-visible">
+        {/* <RadarPageSweep /> */}
         <Nodes icon={<User className="size-18" />} width={180} height={180} />
         <RadarRing size={620} />
         <RadarRing size={1020} />
@@ -65,7 +66,7 @@ export default function Home() {
         <RadarField size={690} rotation={-22}>
           <div className="relative">
             <Nodes
-              icon={<BriefcaseBusiness className="size-10" />}
+              icon={<BriefcaseBusiness className="size-12" />}
               width={120}
               height={120}
             />
@@ -87,7 +88,7 @@ export default function Home() {
         <RadarField size={790} rotation={108}>
           <div className="relative">
             <Nodes
-              icon={<Code className="size-8" />}
+              icon={<Code className="size-10" />}
               width={100}
               height={100}
             />
@@ -117,7 +118,7 @@ export default function Home() {
         <RadarField size={590} rotation={-76}>
           <div className="relative">
             <Nodes
-              icon={<FileQuestionMark className="size-8" />}
+              icon={<FileQuestionMark className="size-10" />}
               width={100}
               height={100}
             />
@@ -139,7 +140,7 @@ export default function Home() {
         <RadarField size={678} rotation={160}>
           <div className="relative">
             <Nodes
-              icon={<Send className="size-10" />}
+              icon={<Send className="size-12" />}
               width={120}
               height={120}
             />
