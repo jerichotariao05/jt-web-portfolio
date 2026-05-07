@@ -62,7 +62,7 @@ export default function Home() {
         className="pointer-events-none fixed inset-x-0 bottom-0 z-5 h-32 bg-linear-to-t from-background/95 via-background/70 to-transparent"
       />
       <main className="relative flex w-full min-h-dvh items-center justify-center overflow-hidden sm:overflow-visible">
-        <RadarPageSweep />
+        {/* <RadarPageSweep /> */}
         <div className="flex flex-col items-center justify-center gap-1.5 p-2">
           <Nodes
             icon={<User className="size-18" />}
@@ -109,7 +109,7 @@ export default function Home() {
             </div>
           </RadarField>
           {/* Skills Zone */}
-          <RadarField size={790} rotation={108}>
+          <RadarField size={720} rotation={110}>
             <div className="relative">
               <Nodes
                 icon={<Code className="size-10" />}

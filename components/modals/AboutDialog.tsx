@@ -2,26 +2,111 @@
 
 import AppDialog from "./AppDialog";
 import { usePortfolioStore, selectModalOpen } from "@/store/usePortfolioStore";
-import { User } from "lucide-react";
+import { MonitorCog, User, FileCode } from "lucide-react";
+import Image from "next/image";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import ExperienceTimeline, {
+  type ExperienceTimelineItem,
+} from "@/components/ExperienceTimeline";
 
 export default function AboutDialog() {
   const open = usePortfolioStore(selectModalOpen("about"));
   const closeModal = usePortfolioStore((state) => state.closeModal);
 
+  const experienceItems: ExperienceTimelineItem[] = [
+    {
+      title: "IT Support Intern",
+      org: "Speakify Team",
+      dateRange: "November 2024 - March 2025",
+      description: [
+        "Provided technical support for software, hardware, and network-related issues, improving system reliability and user productivity.",
+      ],
+      icon: <MonitorCog className="size-4" aria-hidden="true" />,
+    },
+    {
+      title: "Web Developer",
+      org: "CyTech Development and Operations Inc.",
+      dateRange: "December 2025 - March 2026",
+      description: [
+        "Implemented frontend components and dashboard widgets for a unified cybersecurity operating system used globally, working in React, Next.js, TypeScript, and Material UI within an Agile team with daily standups and code reviews via GitLab.",
+        "Built KPI dashboard widgets including interactive gauges, trend charts, and sortable data tables integrated with REST APIs using TanStack Query for data fetching, caching, and real-time polling.",
+        "Improved reusable chart components in a Storybook-based shared component  library, updating and maintaining stories to match Figma specifications across a microfrontend architecture.",
+        "Delivered theme-aware (light and dark mode) and responsive interfaces across multiple modules, achieving close alignment with Figma mockups.",
+        "Performed full-stack integration work: implemented service-to-service authentication between microservices, and validated changes with Postman.",
+      ],
+      icon: <FileCode className="size-4" aria-hidden="true" />,
+    },
+  ];
+
   return (
     <AppDialog
       open={open}
       onClose={() => closeModal("about")}
-      size="large"
+      size="xlarge"
       header={
-        <h3 className="flex items-center gap-2 text-2xl md:text-3xl font-semibold tracking-tight">
-          <User className="size-8" /> About
-        </h3>
+        <div className="flex items-center gap-2">
+          <User className="size-8" />
+          <h2 className="flex items-center gap-2 text-3xl md:text-4xl font-semibold tracking-tight">
+            About
+          </h2>
+        </div>
       }
     >
-      <p className="text-muted-foreground text-sm">
-        About details coming soon.
-      </p>
+      <div className="p-2">
+        <Tabs defaultValue="profile" className="w-full">
+          <TabsList variant="line">
+            <TabsTrigger value="profile">Profile</TabsTrigger>
+            <TabsTrigger value="experience">Work Experience</TabsTrigger>
+          </TabsList>
+          <TabsContent value="profile">
+            {" "}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 items-start p-2">
+              <div className="col-span-1 flex justify-center sm:justify-start">
+                <div className="relative h-[312px] aspect-4/5 mx-auto">
+                  <Image
+                    src="/images/profile.webp"
+                    alt="Profile"
+                    fill
+                    className="rounded-md object-cover"
+                  />
+                </div>
+              </div>
+              <div className="col-span-2">
+                <ScrollArea className="h-[312px] pr-4">
+                  <div className="flex flex-col gap-3">
+                    <h3 className="font-mono text-2xl md:text-3xl font-semibold tracking-tight mb-4 ">
+                      My Journey in Development
+                    </h3>
+                    <p className="text-base md:text-lg leading-relaxed">
+                      I build responsive, data-driven interfaces using React,
+                      Next.js, and TypeScript. My professional background
+                      includes implementing dashboards, data visualization
+                      components, and reusable UI systems for a cybersecurity
+                      platform used by organizations globally
+                    </p>
+                    <p className="text-base md:text-lg leading-relaxed">
+                      What I care about is understanding the systems I work in,
+                      not just shipping features. I pay attention to the details
+                      that show up when you look closely and behavior that feels
+                      intentional. I&apos;m actively looking for a role where I
+                      can keep growing alongside experienced developers.
+                    </p>
+                  </div>
+                </ScrollArea>
+              </div>
+            </div>
+          </TabsContent>
+          <TabsContent value="experience">
+            <div className="flex flex-col gap-2">
+              <h3 className="font-mono text-2xl md:text-3xl font-semibold tracking-tight mb-4 ">
+                My career highlights
+              </h3>
+              <ExperienceTimeline items={experienceItems} />
+            </div>
+          </TabsContent>
+        </Tabs>
+      </div>
     </AppDialog>
   );
 }

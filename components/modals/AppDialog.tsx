@@ -47,7 +47,10 @@ export default function AppDialog({
         if (!isOpen) onClose();
       }}
     >
-      <DialogContent className={cn(sizeClassName[size], contentClassName)}>
+      <DialogContent
+        className={cn(sizeClassName[size], contentClassName)}
+        aria-describedby="dialog-content"
+      >
         <DialogHeader>
           <DialogTitle>{header}</DialogTitle>
         </DialogHeader>
