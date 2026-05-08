@@ -20,7 +20,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "JT Dev Website Portfolio",
+  title: "Jericho Joshua Tariao - Software Developer",
   description: "Portfolio featuring expertise in Web Development",
 };
 

@@ -14,22 +14,6 @@ export default function Heading() {
           <h5 className="font-mono text-lg md:text-xl font-medium">
             Software Developer
           </h5>
-          {/* <div className="flex gap-2 mt-2">
-          <Button
-            size="lg"
-            className="bg-transparent border border-primary/40 text-neutral-100 rounded-full transition-all duration-300 hover:scale-105 cursor-pointer"
-          >
-            Get in Touch
-          </Button>
-          <Button
-            variant="energy"
-            size="lg"
-            className="rounded-full cursor-pointer"
-          >
-            View My Work
-          </Button>
-        </div> */}
-          <ModeToggle />
         </div>
       </div>
       <div className="flex flex-col lg:hidden gap-1.5 p-2 w-fit z-10 fixed top-0 left-0">

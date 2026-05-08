@@ -24,7 +24,7 @@ export default function ExperienceTimeline({
 }: ExperienceTimelineProps) {
   return (
     <div className={cn("w-full", className)}>
-      {/* Mobile: vertical timeline */}
+      {/* Vertical timeline */}
       <div className="min-h-[386px] overflow-y-auto pl-6 pr-4 sm:hidden">
         <ol className="relative border-s border-primary/90">
           {items.map((item, idx) => (
@@ -49,7 +49,7 @@ export default function ExperienceTimeline({
         </ol>
       </div>
 
-      {/* Desktop+: horizontal timeline */}
+      {/* Horizontal timeline */}
       <div className="hidden max-h-[400px] overflow-x-auto overflow-y-hidden pb-6 sm:block">
         <div className="flex min-w-max space-x-8 py-8 px-4">
           <ol className="sm:flex">

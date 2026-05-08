@@ -1478,10 +1478,5 @@ export const projects = {
       technologies: ["Astro", "CSS", "Tailwind CSS", "Typescript"],
       link: "http://heavenlygardenbyangels.com.au/",
     },
-    {
-      title: "Cafe Management System",
-      bgColor: ["#8A5A2B", "#A56B35"],
-      isComingSoon: true,
-    },
   ],
 } as const;

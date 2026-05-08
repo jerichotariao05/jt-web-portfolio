@@ -12,7 +12,7 @@ export default function ContactDialog() {
     <AppDialog
       open={open}
       onClose={() => closeModal("contact")}
-      size="compact"
+      size="medium"
       header={
         <div className="flex items-center gap-2">
           <Send className="size-8" />
