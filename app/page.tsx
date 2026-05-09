@@ -13,6 +13,11 @@ import RadarField from "@/components/RadarField";
 import RadarRing from "@/components/RadarRing";
 import RadarPageSweep from "@/components/RadarPageSweep";
 import SpeedDial from "@/components/SpeedDial";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 import { usePortfolioStore } from "@/store/usePortfolioStore";
 import {
   User,
@@ -22,7 +27,6 @@ import {
   Send,
   Mouse,
 } from "lucide-react";
-import { ModeToggle } from "@/components/ThemeToggle";
 
 export default function Home() {
   const openModal = usePortfolioStore((state) => state.openModal);
@@ -100,12 +104,24 @@ export default function Home() {
           {/* Projects Zone */}
           <RadarField size={690} rotation={-22}>
             <div className="relative">
-              <Nodes
-                icon={<BriefcaseBusiness className="size-12" />}
-                width={120}
-                height={120}
-                onClick={() => openModal("projects")}
-              />
+              <HoverCard>
+                <HoverCardTrigger>
+                  <Nodes
+                    icon={<BriefcaseBusiness className="size-12" />}
+                    width={120}
+                    height={120}
+                    onClick={() => openModal("projects")}
+                  />
+                </HoverCardTrigger>
+                <HoverCardContent side="right" className="w-fit" sideOffset={8}>
+                  <h5 className="font-heading text-lg md:text-xl font-medium tracking-tight uppercase bg-linear-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text">
+                    Projects
+                  </h5>
+                  <p className="font-mono text-sm leading-relaxed">
+                    Things I&apos;ve built
+                  </p>
+                </HoverCardContent>
+              </HoverCard>
               <DataPill
                 title="Stocks Inventory System"
                 className="left-[-8%] top-[30%] -translate-x-full -translate-y-1/2"
@@ -123,12 +139,24 @@ export default function Home() {
           {/* Skills Zone */}
           <RadarField size={720} rotation={110}>
             <div className="relative">
-              <Nodes
-                icon={<Code className="size-10" />}
-                width={100}
-                height={100}
-                onClick={() => openModal("skills")}
-              />
+              <HoverCard>
+                <HoverCardTrigger>
+                  <Nodes
+                    icon={<Code className="size-10" />}
+                    width={100}
+                    height={100}
+                    onClick={() => openModal("skills")}
+                  />
+                </HoverCardTrigger>
+                <HoverCardContent side="left" className="w-fit" sideOffset={8}>
+                  <h5 className="font-heading text-lg md:text-xl font-medium tracking-tight uppercase bg-linear-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text">
+                    Technical Skills
+                  </h5>
+                  <p className="font-mono text-sm leading-relaxed">
+                    Tools and Technologies I&apos;ve Used
+                  </p>
+                </HoverCardContent>
+              </HoverCard>
               <DataPill
                 title="React"
                 className="left-[-8%] top-[20%] -translate-x-full -translate-y-1/2"
@@ -154,12 +182,24 @@ export default function Home() {
           {/* Curiosity Zone*/}
           <RadarField size={590} rotation={-76}>
             <div className="relative">
-              <Nodes
-                icon={<FileQuestionMark className="size-10" />}
-                width={100}
-                height={100}
-                onClick={() => openModal("curiosity")}
-              />
+              <HoverCard>
+                <HoverCardTrigger>
+                  <Nodes
+                    icon={<FileQuestionMark className="size-10" />}
+                    width={100}
+                    height={100}
+                    onClick={() => openModal("curiosity")}
+                  />
+                </HoverCardTrigger>
+                <HoverCardContent side="right" className="w-fit" sideOffset={8}>
+                  <h5 className="font-heading text-lg md:text-xl font-medium tracking-tight uppercase bg-linear-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text">
+                    ???
+                  </h5>
+                  <p className="font-mono text-sm leading-relaxed">
+                    Information you might wanna know or not
+                  </p>
+                </HoverCardContent>
+              </HoverCard>
               <DataPill
                 title="Things about me"
                 className="left-[-12%] top-1/2 -translate-x-full -translate-y-1/2"
@@ -173,12 +213,24 @@ export default function Home() {
           {/* Contact Zone */}
           <RadarField size={678} rotation={160}>
             <div className="relative">
-              <Nodes
-                icon={<Send className="size-12" />}
-                width={120}
-                height={120}
-                onClick={() => openModal("contact")}
-              />
+              <HoverCard>
+                <HoverCardTrigger>
+                  <Nodes
+                    icon={<Send className="size-12" />}
+                    width={120}
+                    height={120}
+                    onClick={() => openModal("contact")}
+                  />
+                </HoverCardTrigger>
+                <HoverCardContent side="left" className="w-fit" sideOffset={8}>
+                  <h5 className="font-heading text-lg md:text-xl font-medium tracking-tight uppercase bg-linear-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text">
+                    Contact
+                  </h5>
+                  <p className="font-mono text-sm leading-relaxed">
+                    How to get in touch with me
+                  </p>
+                </HoverCardContent>
+              </HoverCard>
               <DataPill
                 title="jerichotariao15@gmail.com"
                 className="right-[8%] top-[-2%] translate-x-full -translate-y-1/2"

@@ -14,7 +14,7 @@ export default function Heading() {
           <h3 className="font-heading text-2xl md:text-3xl font-semibold tracking-tight pr-8">
             Jericho Joshua Tariao
           </h3>
-          <h5 className="font-mono text-lg md:text-xl font-medium">
+          <h5 className="font-mono text-lg md:text-xl font-medium bg-linear-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text">
             Software Developer
           </h5>
         </div>

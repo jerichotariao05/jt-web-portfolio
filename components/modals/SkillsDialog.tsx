@@ -18,7 +18,7 @@ export default function SkillsDialog() {
         <div className="flex items-center gap-2">
           <Code className="size-8" />
           <h2 className="flex items-center gap-2 text-3xl md:text-4xl font-semibold tracking-tight">
-            Skills
+            Technical Skills
           </h2>
         </div>
       }
