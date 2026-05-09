@@ -56,6 +56,7 @@ export default function Home() {
   return (
     <>
       <Heading />
+      {/* Overlay for readability */}
       <div
         aria-hidden
         className="pointer-events-none fixed inset-x-0 top-0 z-5 h-32 bg-linear-to-b from-background/95 via-background/70 to-transparent"
@@ -82,6 +83,7 @@ export default function Home() {
           />
           <Nodes
             icon={<User className="size-18" />}
+            className="intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
             width={160}
             height={160}
             image={"/images/profile.webp"}
@@ -108,6 +110,7 @@ export default function Home() {
                 <HoverCardTrigger>
                   <Nodes
                     icon={<BriefcaseBusiness className="size-12" />}
+                    className="intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
                     width={120}
                     height={120}
                     onClick={() => openModal("projects")}
@@ -124,15 +127,15 @@ export default function Home() {
               </HoverCard>
               <DataPill
                 title="Stocks Inventory System"
-                className="left-[-8%] top-[30%] -translate-x-full -translate-y-1/2"
+                className="left-[-8%] top-[30%] -translate-x-full -translate-y-1/2 intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
               />
               <DataPill
                 title="Heavenly Garden by Angels"
-                className="right-[8%] top-[-2%] translate-x-full -translate-y-1/2"
+                className="right-[8%] top-[-2%] translate-x-full -translate-y-1/2 intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
               />
               <DataPill
                 title="Math for Kids"
-                className="left-[-40%] bottom-[10%] -translate-x-1/2 translate-y-full"
+                className="left-[-40%] bottom-[10%] -translate-x-1/2 translate-y-full intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
               />
             </div>
           </RadarField>
@@ -143,6 +146,7 @@ export default function Home() {
                 <HoverCardTrigger>
                   <Nodes
                     icon={<Code className="size-10" />}
+                    className="intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
                     width={100}
                     height={100}
                     onClick={() => openModal("skills")}
@@ -159,23 +163,23 @@ export default function Home() {
               </HoverCard>
               <DataPill
                 title="React"
-                className="left-[-8%] top-[20%] -translate-x-full -translate-y-1/2"
+                className="left-[-8%] top-[20%] -translate-x-full -translate-y-1/2 intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
               />
               <DataPill
                 title="PostgreSQL"
-                className="left-[-20%] top-[70%] -translate-x-full -translate-y-1/2"
+                className="left-[-20%] top-[70%] -translate-x-full -translate-y-1/2 intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
               />
               <DataPill
                 title="Next.js"
-                className="right-[8%] top-[-8%] translate-x-full -translate-y-1/2"
+                className="right-[8%] top-[-8%] translate-x-full -translate-y-1/2 intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
               />
               <DataPill
                 title="Django"
-                className="right-[-20%] bottom-[20%] translate-x-full -translate-y-1/2"
+                className="right-[-20%] bottom-[20%] translate-x-full -translate-y-1/2 intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
               />
               <DataPill
                 title="Python"
-                className="left-[80%] bottom-[-10%] -translate-x-1/2 translate-y-full"
+                className="left-[80%] bottom-[-10%] -translate-x-1/2 translate-y-full intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
               />
             </div>
           </RadarField>
@@ -186,6 +190,7 @@ export default function Home() {
                 <HoverCardTrigger>
                   <Nodes
                     icon={<FileQuestionMark className="size-10" />}
+                    className="intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
                     width={100}
                     height={100}
                     onClick={() => openModal("curiosity")}
@@ -202,11 +207,11 @@ export default function Home() {
               </HoverCard>
               <DataPill
                 title="Things about me"
-                className="left-[-12%] top-1/2 -translate-x-full -translate-y-1/2"
+                className="left-[-12%] top-1/2 -translate-x-full -translate-y-1/2 intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
               />
               <DataPill
                 title="Hobbies"
-                className="left-[10%] top-[-10%] -translate-x-full -translate-y-1/2"
+                className="left-[10%] top-[-10%] -translate-x-full -translate-y-1/2 intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
               />
             </div>
           </RadarField>
@@ -217,6 +222,7 @@ export default function Home() {
                 <HoverCardTrigger>
                   <Nodes
                     icon={<Send className="size-12" />}
+                    className="intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
                     width={120}
                     height={120}
                     onClick={() => openModal("contact")}
@@ -233,15 +239,15 @@ export default function Home() {
               </HoverCard>
               <DataPill
                 title="jerichotariao15@gmail.com"
-                className="right-[8%] top-[-2%] translate-x-full -translate-y-1/2"
+                className="right-[8%] top-[-2%] translate-x-full -translate-y-1/2 intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
               />
               <DataPill
                 title="LinkedIn"
-                className="right-[-8%] top-1/2 translate-x-full -translate-y-1/2"
+                className="right-[-8%] top-1/2 translate-x-full -translate-y-1/2 intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
               />
               <DataPill
                 title="GitHub"
-                className="left-[-40%] bottom-[20%] -translate-x-1/2 translate-y-full"
+                className="left-[-40%] bottom-[20%] -translate-x-1/2 translate-y-full intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
               />
             </div>
           </RadarField>
@@ -286,7 +292,7 @@ export default function Home() {
           openModal("contact");
         }}
         aria-label="Contact button"
-        className="fixed bottom-10 md:bottom-2 right-2 z-50 flex items-center justify-center size-16 text-foreground rounded-full shadow-xl cursor-pointer conic-border-rotate"
+        className="fixed bottom-10 lg:bottom-2 right-2 z-50 flex items-center justify-center size-16 text-foreground rounded-full shadow-xl cursor-pointer conic-border-rotate"
       >
         <Send className="size-8" />
       </button>
