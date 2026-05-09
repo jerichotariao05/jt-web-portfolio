@@ -5,11 +5,13 @@ import React from "react";
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { VisuallyHidden } from "radix-ui";
 import { cn } from "@/lib/utils";
 
 export type AppDialogSize = "compact" | "medium" | "large" | "xlarge" | "full";
@@ -26,6 +28,7 @@ interface AppDialogProps {
   open: boolean;
   onClose: () => void;
   header: React.ReactNode;
+  description?: React.ReactNode;
   children: React.ReactNode;
   footer?: React.ReactNode;
   size?: AppDialogSize;
@@ -37,6 +40,7 @@ export default function AppDialog({
   open,
   onClose,
   header,
+  description,
   children,
   footer,
   size = "compact",
@@ -56,12 +60,18 @@ export default function AppDialog({
           sizeClassName[size],
           contentClassName
         )}
-        aria-describedby="dialog-content"
       >
         <DialogHeader>
           <DialogTitle>{header}</DialogTitle>
+          {description ? (
+            <DialogDescription>{description}</DialogDescription>
+          ) : (
+            <VisuallyHidden.Root>
+              <DialogDescription>Dialog content</DialogDescription>
+            </VisuallyHidden.Root>
+          )}
         </DialogHeader>
-         <ScrollArea className="h-full">
+        <ScrollArea className="h-full">
           <div className={cn("min-h-0", bodyClassName)}>{children}</div>
         </ScrollArea>
         {footer && <DialogFooter>{footer}</DialogFooter>}

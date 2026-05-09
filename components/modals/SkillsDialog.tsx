@@ -24,7 +24,8 @@ export default function SkillsDialog() {
       }
     >
       <p className="text-muted-foreground leading-relaxed mb-4">
-        These are the technologies and tools I use to build my projects.
+        These are the technologies and tools I use to build my projects and
+        learned from my experiences.
       </p>
       <div className="flex flex-col gap-8">
         {/* Frontend Development */}

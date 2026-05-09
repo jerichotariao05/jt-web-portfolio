@@ -37,7 +37,7 @@ export default function SpeedDial({ items, className }: SpeedDialProps) {
     <div
       ref={containerRef}
       className={cn(
-        "fixed bottom-4 right-4 z-50 flex flex-col items-end",
+        "fixed bottom-28 md:bottom-20 right-2 z-50 flex flex-col items-end",
         className,
       )}
     >
