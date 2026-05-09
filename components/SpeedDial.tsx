@@ -53,11 +53,13 @@ export default function SpeedDial({ items, className }: SpeedDialProps) {
         {items.map((item, index) => (
           <button
             key={index}
+            type="button"
+            aria-label={item.label}
             onClick={() => {
               item.onClick();
               setOpen(false);
             }}
-            className="flex items-center group focus:outline-none"
+            className="flex items-center group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-full"
             style={{ transitionDelay: open ? `${index * 50}ms` : "0ms" }}
           >
             <span className="mr-3 px-3 py-1 font-medium text-accent-foreground bg-card/90 backdrop-blur-sm border border-primary rounded-full shadow-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">

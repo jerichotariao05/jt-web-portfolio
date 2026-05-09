@@ -27,6 +27,33 @@ type AnyProject =
   | (typeof projects.school)[number]
   | (typeof projects.personal)[number];
 
+const SCREENSHOT_FALLBACK = "/images/no_image.webp";
+
+function ProjectScreenshotImage({
+  src,
+  alt,
+  className,
+  sizes,
+}: {
+  src: string;
+  alt: string;
+  className: string;
+  sizes: string;
+}) {
+  const [currentSrc, setCurrentSrc] = useState(src);
+
+  return (
+    <Image
+      src={currentSrc}
+      alt={alt}
+      fill
+      className={className}
+      sizes={sizes}
+      onError={() => setCurrentSrc(SCREENSHOT_FALLBACK)}
+    />
+  );
+}
+
 function ProjectDetail({ project }: { project: AnyProject }) {
   const images = "images" in project ? project.images : ([] as string[]);
   const keyFeatures =
@@ -89,12 +116,12 @@ function ProjectDetail({ project }: { project: AnyProject }) {
             <Carousel className="w-full">
               <CarouselContent>
                 {images.map((src, i) => (
-                  <CarouselItem key={i}>
+                  <CarouselItem key={`${project.title}-${i}-${src}`}>
                     <div className="relative aspect-video overflow-hidden rounded-xl">
-                      <Image
+                      <ProjectScreenshotImage
+                        key={src}
                         src={src}
                         alt={`${project.title} screenshot ${i + 1}`}
-                        fill
                         className="object-contain"
                         sizes="(max-width: 768px) 100vw, 700px"
                       />
@@ -107,10 +134,10 @@ function ProjectDetail({ project }: { project: AnyProject }) {
             </Carousel>
           ) : (
             <div className="relative aspect-video overflow-hidden rounded-xl">
-              <Image
+              <ProjectScreenshotImage
+                key={images[0]}
                 src={images[0]}
                 alt={project.title}
-                fill
                 className="object-contain"
                 sizes="(max-width: 768px) 100vw, 700px"
               />

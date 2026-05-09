@@ -11,7 +11,6 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { VisuallyHidden } from "radix-ui";
 import { cn } from "@/lib/utils";
 
 export type AppDialogSize = "compact" | "medium" | "large" | "xlarge" | "full";
@@ -60,16 +59,13 @@ export default function AppDialog({
           sizeClassName[size],
           contentClassName
         )}
+        {...(!description ? { "aria-describedby": undefined } : {})}
       >
         <DialogHeader>
           <DialogTitle>{header}</DialogTitle>
           {description ? (
             <DialogDescription>{description}</DialogDescription>
-          ) : (
-            <VisuallyHidden.Root>
-              <DialogDescription>Dialog content</DialogDescription>
-            </VisuallyHidden.Root>
-          )}
+          ) : null}
         </DialogHeader>
         <ScrollArea className="h-full">
           <div className={cn("min-h-0", bodyClassName)}>{children}</div>

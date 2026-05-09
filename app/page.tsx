@@ -82,6 +82,7 @@ export default function Home() {
             className="block lg:hidden left-[60%] bottom-[-30%] -translate-x-full -translate-y-1/2"
           />
           <Nodes
+            ariaLabel="Open About"
             icon={<User className="size-18" />}
             className="intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
             width={160}
@@ -109,6 +110,7 @@ export default function Home() {
               <HoverCard>
                 <HoverCardTrigger>
                   <Nodes
+                    ariaLabel="Open Projects"
                     icon={<BriefcaseBusiness className="size-12" />}
                     className="intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
                     width={120}
@@ -145,6 +147,7 @@ export default function Home() {
               <HoverCard>
                 <HoverCardTrigger>
                   <Nodes
+                    ariaLabel="Open Technical Skills"
                     icon={<Code className="size-10" />}
                     className="intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
                     width={100}
@@ -189,6 +192,7 @@ export default function Home() {
               <HoverCard>
                 <HoverCardTrigger>
                   <Nodes
+                    ariaLabel="Open more about this site"
                     icon={<FileQuestionMark className="size-10" />}
                     className="intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
                     width={100}
@@ -221,6 +225,7 @@ export default function Home() {
               <HoverCard>
                 <HoverCardTrigger>
                   <Nodes
+                    ariaLabel="Open Contact"
                     icon={<Send className="size-12" />}
                     className="intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
                     width={120}
@@ -277,7 +282,10 @@ export default function Home() {
           <span className="relative inline-flex size-2 rounded-full bg-accent shadow-[0_0_8px_color-mix(in_srgb,var(--ring)_80%,transparent)]" />
         </RadarField>
       </main>
-      <div className="hidden absolute z-20 bottom-1 left-0 w-full lg:flex flex-col items-center justify-center gap-2 cursor-help">
+      <div
+        aria-hidden
+        className="hidden absolute z-20 bottom-1 left-0 w-full lg:flex flex-col items-center justify-center gap-2 cursor-help"
+      >
         <Mouse className="size-6" />
         <p className="font-mono text-sm leading-relaxed">
           Move or Click to Navigate

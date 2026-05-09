@@ -53,8 +53,8 @@ export function useFadeAnimation() {
       return;
     }
 
-    /** After any intro element has played once, skip on later navigations (same tab). */
-    const markIntroSeenIfOnce = (target: HTMLElement) => {
+    /** First reveal of any `intersect-once` node; later route loads skip intro in this tab. */
+    const persistIntroSeenSession = (target: HTMLElement) => {
       if (!target.classList.contains("intersect-once")) return;
       try {
         window.sessionStorage.setItem(STORAGE_KEY, "1");
@@ -73,7 +73,7 @@ export function useFadeAnimation() {
             if (target.classList.contains("intersect-no-queue")) {
               if (entry.isIntersecting) {
                 target.removeAttribute("no-intersect");
-                markIntroSeenIfOnce(target);
+                persistIntroSeenSession(target);
                 if (target.classList.contains("intersect-once")) {
                   observer.unobserve(target);
                 }
@@ -87,7 +87,7 @@ export function useFadeAnimation() {
               if (!target.hasAttribute("data-animated")) {
                 target.removeAttribute("no-intersect");
                 target.setAttribute("data-animated", "true");
-                markIntroSeenIfOnce(target);
+                persistIntroSeenSession(target);
 
                 const delay =
                   animationCounter * DELAY_BETWEEN_ANIMATIONS;

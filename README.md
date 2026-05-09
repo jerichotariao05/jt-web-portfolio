@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jericho Joshua Tariao — Radar Portfolio
 
-## Getting Started
+A single-page portfolio with a **radar-style interface**. You sit at the center; projects, skills, contact, and extras appear as nodes you can explore through modals instead of long vertical scrolling.
 
-First, run the development server:
+## Live site
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Deployed URL:
+
+## Tech stack
+
+- [Next.js](https://nextjs.org) (App Router)
+- [React](https://react.dev)
+- [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [shadcn/ui](https://ui.shadcn.com) (Radix primitives)
+- [Zustand](https://zustand-demo.pmnd.rs) — modal and UI state
+- [Lucide React](https://lucide.dev) — icons
+- [next-themes](https://github.com/pacocoursey/next-themes) — light / dark mode
+
+## Project structure
+
+```
+jt-website-portfolio/
+├── app/
+│   ├── layout.tsx          # fonts, metadata (SEO / Open Graph), theme providers
+│   ├── page.tsx             # radar landing, nodes, speed dial, dialogs
+│   ├── globals.css
+│   ├── not-found.tsx
+│   └── maintenance/
+├── components/
+│   ├── modals/             # About, Projects, Skills, Contact, Curiosity, shared AppDialog
+│   ├── ui/                 # shadcn components (dialog, carousel, tabs, etc.)
+│   ├── RadarField.tsx      # positions nodes on the radar
+│   ├── RadarRing.tsx       # concentric rings
+│   ├── RadarPageSweep.tsx  # page-level sweep animation
+│   ├── Nodes.tsx           # circular node buttons + optional profile image
+│   ├── ProjectCard.tsx     # project teaser cards
+│   ├── SpeedDial.tsx       # mobile FAB menu
+│   ├── Heading.tsx         # name, role, desktop hint
+│   └── ...
+├── hooks/                   # e.g. fade / animation helpers
+├── lib/
+│   ├── data.tsx            # projects, skills content
+│   └── utils.ts
+├── public/
+│   ├── images/             # profile, project assets, blank_profile / no_image fallbacks
+│   ├── Resume.pdf
+│   └── og-image.png        # add a 1200×630 image for social previews (see below)
+└── store/
+    └── usePortfolioStore.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Getting started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Requires **Node.js 18+** (or the version your Next.js release recommends).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000).
 
-To learn more about Next.js, take a look at the following resources:
+Other scripts:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run build` — production build
+- `npm run start` — run production server locally
+- `npm run lint` — ESLint
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Features (implementation notes)
 
-## Deploy on Vercel
+- **Accessible nodes** — Radar `Nodes` use a real `button` when clickable, with labels and keyboard focus styles.
+- **Image fallbacks** — `public/images/blank_profile.webp` (profile hover) and `no_image.webp` (broken project thumbnails / screenshots) swap in on `onError`.
+- **Dialogs** — Built on Radix Dialog; content scrolls inside `AppDialog` where needed.
+- **Theming** — System / light / dark via `ThemeProvider` on the root layout.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Personal portfolio — © Jericho Joshua Tariao. All rights reserved.
