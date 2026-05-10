@@ -14,7 +14,7 @@ export default function RadarPageSweep() {
       setTimeout(() => setActive(false), SWEEP_DURATION_MS + 100);
     };
 
-    // First sweep shortly after mount so visitors see it immediately
+    // First sweep shortly after mount
     const initial = setTimeout(triggerSweep, 1200);
     const interval = setInterval(triggerSweep, SWEEP_INTERVAL_MS);
 
@@ -30,7 +30,7 @@ export default function RadarPageSweep() {
       className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
     >
       <div
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+        className="absolute left-1/2 top-[45%] lg:top-1/2 -translate-x-1/2 -translate-y-1/2"
         style={{
           width: "250vmax",
           height: "250vmax",

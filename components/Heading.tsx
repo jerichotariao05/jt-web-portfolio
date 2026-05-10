@@ -9,7 +9,7 @@ export default function Heading() {
       </div>
 
       <div className="hidden lg:block fixed top-0 left-0 w-fit z-10 px-1">
-        <div className="flex flex-col gap-1.5 p-2">
+        <div className="flex flex-col gap-1 p-2">
           <h3 className="font-heading text-2xl md:text-3xl font-semibold tracking-tight pr-8">
             Jericho Joshua Tariao
           </h3>

@@ -22,11 +22,6 @@ import {
   Send,
   Mouse,
 } from "lucide-react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 
 export default function Home() {
   const openModal = usePortfolioStore((state) => state.openModal);
@@ -91,12 +86,21 @@ export default function Home() {
             onClick={() => openModal("about")}
           />
           <div className="flex lg:hidden flex-col justify-center items-center gap-1.5 p-2">
-            <h1 className="font-heading text-3xl font-bold tracking-tight text-center">
+            <h3 className="font-heading text-2xl md:text-3xl font-semibold tracking-tight text-center">
               Jericho Joshua Tariao
-            </h1>
-            <h3 className="font-mono text-xl font-semibold tracking-tight">
-              Software Developer
             </h3>
+            <h5 className="font-mono text-lg md:text-xl font-medium bg-linear-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text">
+              Software Developer
+            </h5>
+            <div className="w-fit flex gap-2 justify-center items-center bg-card px-2.5 py-1.5 rounded-full border border-border">
+              <p className="text-xs font-medium leading-relaxed">
+                Available for work
+              </p>
+              <span className="relative flex size-2.5">
+                <span className="animate-ping-lg absolute inline-flex h-full w-full rounded-full bg-green-200"></span>
+                <span className="relative inline-flex rounded-full size-2.5 bg-green-400"></span>
+              </span>
+            </div>
           </div>
         </div>
         <RadarRing size={620} />
@@ -107,29 +111,14 @@ export default function Home() {
           {/* Projects Zone */}
           <RadarField size={690} rotation={-22}>
             <div className="relative">
-              <Tooltip>
-                <TooltipTrigger>
-                  <Nodes
-                    ariaLabel="Open Projects"
-                    icon={<BriefcaseBusiness className="size-12" />}
-                    className="intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
-                    width={120}
-                    height={120}
-                    onClick={() => openModal("projects")}
-                  />
-                </TooltipTrigger>
-                <TooltipContent
-                  side="right"
-                  className="flex flex-col items-start gap-1"
-                >
-                  <h5 className="font-heading text-lg md:text-xl font-medium tracking-tight uppercase bg-linear-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text">
-                    Projects
-                  </h5>
-                  <p className="font-mono text-sm leading-relaxed">
-                    Things I&apos;ve built
-                  </p>
-                </TooltipContent>
-              </Tooltip>
+              <Nodes
+                ariaLabel="Open Projects"
+                icon={<BriefcaseBusiness className="size-12" />}
+                className="intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
+                width={120}
+                height={120}
+                onClick={() => openModal("projects")}
+              />
               <DataPill
                 title="Stocks Inventory System"
                 className="left-[-8%] top-[30%] -translate-x-full -translate-y-1/2 intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
@@ -147,29 +136,14 @@ export default function Home() {
           {/* Skills Zone */}
           <RadarField size={720} rotation={110}>
             <div className="relative">
-              <Tooltip>
-                <TooltipTrigger>
-                  <Nodes
-                    ariaLabel="Open Technical Skills"
-                    icon={<Code className="size-10" />}
-                    className="intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
-                    width={100}
-                    height={100}
-                    onClick={() => openModal("skills")}
-                  />
-                </TooltipTrigger>
-                <TooltipContent
-                  side="left"
-                  className="flex flex-col items-start gap-1"
-                >
-                  <h5 className="font-heading text-lg md:text-xl font-medium tracking-tight uppercase bg-linear-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text">
-                    Technical Skills
-                  </h5>
-                  <p className="font-mono text-sm leading-relaxed">
-                    Tools and Technologies I&apos;ve Used
-                  </p>
-                </TooltipContent>
-              </Tooltip>
+              <Nodes
+                ariaLabel="Open Technical Skills"
+                icon={<Code className="size-10" />}
+                className="intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
+                width={100}
+                height={100}
+                onClick={() => openModal("skills")}
+              />
               <DataPill
                 title="React"
                 className="left-[-8%] top-[20%] -translate-x-full -translate-y-1/2 intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
@@ -195,30 +169,14 @@ export default function Home() {
           {/* Curiosity Zone*/}
           <RadarField size={590} rotation={-76}>
             <div className="relative">
-              <Tooltip>
-                <TooltipTrigger>
-                  <Nodes
-                    ariaLabel="Open more about this site"
-                    icon={<FileQuestionMark className="size-10" />}
-                    className="intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
-                    width={100}
-                    height={100}
-                    onClick={() => openModal("curiosity")}
-                  />
-                </TooltipTrigger>
-                <TooltipContent
-                  side="right"
-                  className="flex flex-col items-start gap-1"
-                >
-                  <h5 className="font-heading text-lg md:text-xl font-medium tracking-tight uppercase bg-linear-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text">
-                    ???
-                  </h5>
-                  <p className="font-mono text-sm leading-relaxed">
-                    Information you might wanna know or not
-                  </p>
-                </TooltipContent>
-              </Tooltip>
-
+              <Nodes
+                ariaLabel="Open more about this site"
+                icon={<FileQuestionMark className="size-10" />}
+                className="intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
+                width={100}
+                height={100}
+                onClick={() => openModal("curiosity")}
+              />
               <DataPill
                 title="Things about me"
                 className="left-[-12%] top-1/2 -translate-x-full -translate-y-1/2 intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
@@ -232,29 +190,14 @@ export default function Home() {
           {/* Contact Zone */}
           <RadarField size={678} rotation={160}>
             <div className="relative">
-              <Tooltip>
-                <TooltipTrigger>
-                  <Nodes
-                    ariaLabel="Open Contact"
-                    icon={<Send className="size-12" />}
-                    className="intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
-                    width={120}
-                    height={120}
-                    onClick={() => openModal("contact")}
-                  />
-                </TooltipTrigger>
-                <TooltipContent
-                  side="left"
-                  className="flex flex-col items-start gap-1"
-                >
-                  <h5 className="font-heading text-lg md:text-xl font-medium tracking-tight uppercase bg-linear-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text">
-                    Contact
-                  </h5>
-                  <p className="font-mono text-sm leading-relaxed">
-                    How to get in touch with me
-                  </p>
-                </TooltipContent>
-              </Tooltip>
+              <Nodes
+                ariaLabel="Open Contact"
+                icon={<Send className="size-12" />}
+                className="intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
+                width={120}
+                height={120}
+                onClick={() => openModal("contact")}
+              />
               <DataPill
                 title="jerichotariao15@gmail.com"
                 className="right-[8%] top-[-2%] translate-x-full -translate-y-1/2 intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
