@@ -9,7 +9,6 @@ const PROFILE_FALLBACK = "/images/blank_profile.webp";
 interface NodeProps {
   title?: string;
   ariaLabel?: string;
-  description?: string;
   width: number;
   height: number;
   icon?: React.ReactElement;
@@ -63,12 +62,12 @@ export default function Nodes({
 
   const interactive = Boolean(onClick);
   const accessibleName =
-    ariaLabel?.trim() || title?.trim() || (interactive ? "Open section" : undefined);
+    ariaLabel?.trim() ||
+    title?.trim() ||
+    (interactive ? "Open section" : undefined);
 
   const circle = (
-    <div
-      className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-full border border-ring/30 bg-sky-50 shadow-[0_0_10px_rgba(2,6,23,0.10),0_0_24px_rgba(2,6,23,0.06),inset_0_0_12px_rgba(56,189,248,0.10)] motion-safe:transition-[transform,border-color,box-shadow] motion-safe:duration-300 motion-reduce:transition-none motion-safe:group-hover:scale-105 group-hover:border-ring/70 group-hover:shadow-[inset_0_0_16px_color-mix(in_srgb,var(--ring)_45%,transparent),0_0_20px_color-mix(in_srgb,var(--ring)_22%,transparent)] dark:border-ring/40 dark:bg-[#05366F] dark:shadow-[0_0_10px_#05366F99,0_0_24px_#05366F4D,inset_0_0_12px_#05366F26] dark:group-hover:border-[#169BE9]/90 dark:group-hover:shadow-[inset_0_0_16px_color-mix(in_srgb,var(--ring)_60%,transparent),0_0_20px_color-mix(in_srgb,var(--ring)_35%,transparent)] motion-reduce:group-hover:scale-100"
-    >
+    <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-full border border-ring/30 bg-sky-50 shadow-[0_0_10px_rgba(2,6,23,0.10),0_0_24px_rgba(2,6,23,0.06),inset_0_0_12px_rgba(56,189,248,0.10)] motion-safe:transition-[transform,border-color,box-shadow] motion-safe:duration-300 motion-reduce:transition-none motion-safe:group-hover:scale-105 group-hover:border-ring/70 group-hover:shadow-[inset_0_0_16px_color-mix(in_srgb,var(--ring)_45%,transparent),0_0_20px_color-mix(in_srgb,var(--ring)_22%,transparent)] dark:border-ring/40 dark:bg-[#05366F] dark:shadow-[0_0_10px_#05366F99,0_0_24px_#05366F4D,inset_0_0_12px_#05366F26] dark:group-hover:border-[#169BE9]/90 dark:group-hover:shadow-[inset_0_0_16px_color-mix(in_srgb,var(--ring)_60%,transparent),0_0_20px_color-mix(in_srgb,var(--ring)_35%,transparent)] motion-reduce:group-hover:scale-100">
       {icon ? (
         <span className="relative z-10 pointer-events-none">{icon}</span>
       ) : null}

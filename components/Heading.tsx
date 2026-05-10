@@ -1,4 +1,3 @@
-import React from "react";
 import { ModeToggle } from "./ThemeToggle";
 import { Smartphone } from "lucide-react";
 

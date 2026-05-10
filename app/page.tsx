@@ -13,11 +13,6 @@ import RadarField from "@/components/RadarField";
 import RadarRing from "@/components/RadarRing";
 import RadarPageSweep from "@/components/RadarPageSweep";
 import SpeedDial from "@/components/SpeedDial";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
 import { usePortfolioStore } from "@/store/usePortfolioStore";
 import {
   User,
@@ -27,6 +22,11 @@ import {
   Send,
   Mouse,
 } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export default function Home() {
   const openModal = usePortfolioStore((state) => state.openModal);
@@ -107,8 +107,8 @@ export default function Home() {
           {/* Projects Zone */}
           <RadarField size={690} rotation={-22}>
             <div className="relative">
-              <HoverCard>
-                <HoverCardTrigger>
+              <Tooltip>
+                <TooltipTrigger>
                   <Nodes
                     ariaLabel="Open Projects"
                     icon={<BriefcaseBusiness className="size-12" />}
@@ -117,16 +117,19 @@ export default function Home() {
                     height={120}
                     onClick={() => openModal("projects")}
                   />
-                </HoverCardTrigger>
-                <HoverCardContent side="right" className="w-fit" sideOffset={8}>
+                </TooltipTrigger>
+                <TooltipContent
+                  side="right"
+                  className="flex flex-col items-start gap-1"
+                >
                   <h5 className="font-heading text-lg md:text-xl font-medium tracking-tight uppercase bg-linear-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text">
                     Projects
                   </h5>
                   <p className="font-mono text-sm leading-relaxed">
                     Things I&apos;ve built
                   </p>
-                </HoverCardContent>
-              </HoverCard>
+                </TooltipContent>
+              </Tooltip>
               <DataPill
                 title="Stocks Inventory System"
                 className="left-[-8%] top-[30%] -translate-x-full -translate-y-1/2 intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
@@ -144,8 +147,8 @@ export default function Home() {
           {/* Skills Zone */}
           <RadarField size={720} rotation={110}>
             <div className="relative">
-              <HoverCard>
-                <HoverCardTrigger>
+              <Tooltip>
+                <TooltipTrigger>
                   <Nodes
                     ariaLabel="Open Technical Skills"
                     icon={<Code className="size-10" />}
@@ -154,16 +157,19 @@ export default function Home() {
                     height={100}
                     onClick={() => openModal("skills")}
                   />
-                </HoverCardTrigger>
-                <HoverCardContent side="left" className="w-fit" sideOffset={8}>
+                </TooltipTrigger>
+                <TooltipContent
+                  side="left"
+                  className="flex flex-col items-start gap-1"
+                >
                   <h5 className="font-heading text-lg md:text-xl font-medium tracking-tight uppercase bg-linear-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text">
                     Technical Skills
                   </h5>
                   <p className="font-mono text-sm leading-relaxed">
                     Tools and Technologies I&apos;ve Used
                   </p>
-                </HoverCardContent>
-              </HoverCard>
+                </TooltipContent>
+              </Tooltip>
               <DataPill
                 title="React"
                 className="left-[-8%] top-[20%] -translate-x-full -translate-y-1/2 intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
@@ -189,8 +195,8 @@ export default function Home() {
           {/* Curiosity Zone*/}
           <RadarField size={590} rotation={-76}>
             <div className="relative">
-              <HoverCard>
-                <HoverCardTrigger>
+              <Tooltip>
+                <TooltipTrigger>
                   <Nodes
                     ariaLabel="Open more about this site"
                     icon={<FileQuestionMark className="size-10" />}
@@ -199,16 +205,20 @@ export default function Home() {
                     height={100}
                     onClick={() => openModal("curiosity")}
                   />
-                </HoverCardTrigger>
-                <HoverCardContent side="right" className="w-fit" sideOffset={8}>
+                </TooltipTrigger>
+                <TooltipContent
+                  side="right"
+                  className="flex flex-col items-start gap-1"
+                >
                   <h5 className="font-heading text-lg md:text-xl font-medium tracking-tight uppercase bg-linear-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text">
                     ???
                   </h5>
                   <p className="font-mono text-sm leading-relaxed">
                     Information you might wanna know or not
                   </p>
-                </HoverCardContent>
-              </HoverCard>
+                </TooltipContent>
+              </Tooltip>
+
               <DataPill
                 title="Things about me"
                 className="left-[-12%] top-1/2 -translate-x-full -translate-y-1/2 intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
@@ -222,8 +232,8 @@ export default function Home() {
           {/* Contact Zone */}
           <RadarField size={678} rotation={160}>
             <div className="relative">
-              <HoverCard>
-                <HoverCardTrigger>
+              <Tooltip>
+                <TooltipTrigger>
                   <Nodes
                     ariaLabel="Open Contact"
                     icon={<Send className="size-12" />}
@@ -232,16 +242,19 @@ export default function Home() {
                     height={120}
                     onClick={() => openModal("contact")}
                   />
-                </HoverCardTrigger>
-                <HoverCardContent side="left" className="w-fit" sideOffset={8}>
+                </TooltipTrigger>
+                <TooltipContent
+                  side="left"
+                  className="flex flex-col items-start gap-1"
+                >
                   <h5 className="font-heading text-lg md:text-xl font-medium tracking-tight uppercase bg-linear-to-r from-sky-400 to-blue-600 text-transparent bg-clip-text">
                     Contact
                   </h5>
                   <p className="font-mono text-sm leading-relaxed">
                     How to get in touch with me
                   </p>
-                </HoverCardContent>
-              </HoverCard>
+                </TooltipContent>
+              </Tooltip>
               <DataPill
                 title="jerichotariao15@gmail.com"
                 className="right-[8%] top-[-2%] translate-x-full -translate-y-1/2 intersect-once intersect-no-queue lg:motion-safe:opacity-0 lg:motion-safe:intersect:animate-fade"
