@@ -4,7 +4,7 @@ A single-page portfolio with a **radar-style interface**. You sit at the center;
 
 ## Live site
 
-Deployed URL:
+Deployed URL: https://jerichotariao.vercel.app/
 
 ## Tech stack
 
