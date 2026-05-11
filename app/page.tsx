@@ -256,7 +256,7 @@ export default function Home() {
           openModal("contact");
         }}
         aria-label="Contact button"
-        className="fixed bottom-10 lg:bottom-2 right-2 z-50 flex items-center justify-center size-16 text-foreground rounded-full shadow-xl cursor-pointer conic-border-rotate"
+        className="fixed bottom-10 md:bottom-2 right-2 z-50 flex items-center justify-center size-16 text-foreground rounded-full shadow-xl cursor-pointer conic-border-rotate"
       >
         <Send className="size-8" />
       </button>
