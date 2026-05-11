@@ -1,10 +1,8 @@
-# Jericho Joshua Tariao — Radar Portfolio
+# Jericho Joshua Tariao — Portfolio
 
 A single-page portfolio with a **radar-style interface**. You sit at the center; projects, skills, contact, and extras appear as nodes you can explore through modals instead of long vertical scrolling.
 
-## Live site
-
-Deployed URL: https://jerichotariao.vercel.app/
+**Live Site:** [View portfolio](https://jerichotariao.vercel.app/)
 
 ## Tech stack
 
